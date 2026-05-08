@@ -1,5 +1,9 @@
 # Claude Session Monitor
 
+<p align="center">
+  <img src="docs/screenshot.png" alt="Claude Session Monitor menu bar dropdown showing 40.8% current session usage, 163% projected at burn rate, token counts, burn rate, reset time and cost." width="420">
+</p>
+
 A tiny macOS menu bar app that shows your current Claude Code 5-hour session usage as `XX%` and posts notifications as you approach the cap.
 
 It's a thin native (Swift / AppKit) wrapper around [`ccusage`](https://github.com/ryoppippi/ccusage), which reads your local `~/.claude/projects/*.jsonl` transcripts. The percentage is an estimate based on your historical max session — it won't match `claude.ai/settings/usage` exactly, but it tracks the same 5-hour rolling window and only counts CLI usage.
