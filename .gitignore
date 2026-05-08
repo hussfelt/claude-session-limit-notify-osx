@@ -1,0 +1,8 @@
+.build/
+.swiftpm/
+*.xcodeproj/
+DerivedData/
+ClaudeSessionMonitor.app/
+dist/
+.DS_Store
+.claude/
