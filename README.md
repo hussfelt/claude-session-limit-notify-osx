@@ -10,6 +10,22 @@ It's a thin native (Swift / AppKit) wrapper around [`ccusage`](https://github.co
 - **Dropdown:** current %, projected % at current burn rate, tokens used / limit, burn rate (tok/min), window reset time, current cost.
 - **Notifications:** at 80%, 90%, 95%, 100%, and on session reset (when a new 5-hour window starts).
 
+## Download
+
+Prebuilt universal binaries (Apple Silicon + Intel) are published on the [Releases page](https://github.com/hussfelt/claude-session-limit-notify-osx/releases).
+
+1. Download the `ClaudeSessionMonitor-vX.Y.Z.zip` from the latest release and unzip it.
+2. Move `ClaudeSessionMonitor.app` to `/Applications`.
+3. **First launch:** right-click the app → *Open* → *Open*. The build is ad-hoc signed (not notarized), so Gatekeeper will block a normal double-click on first run. After the first allow, future launches work normally.
+4. Grant the notification permission prompt.
+5. Optional: add it to *System Settings → General → Login Items* so it starts at login.
+
+You can verify the download against the published checksum:
+
+```bash
+shasum -a 256 -c ClaudeSessionMonitor-vX.Y.Z.zip.sha256
+```
+
 ## Requirements
 
 | | |
